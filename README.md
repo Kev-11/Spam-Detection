@@ -11,7 +11,7 @@ Check out the deployed app here 👉 [spam-detection-sms.streamlit.app](https://
 
 - Predict whether an SMS is Spam or Not Spam
 - Clean and interactive Streamlit interface
-- Uses a trained machine learning model (Multinomial Naive Bayes)
+- Uses a trained machine learning model (ExtraTrees Classifier)
 - Text preprocessing (lowercasing, punctuation removal, stopwords filtering, etc.)
 
 ---
@@ -29,11 +29,11 @@ Check out the deployed app here 👉 [spam-detection-sms.streamlit.app](https://
 ## 📂 Project Structure
 
 ```
-├── spam_detection_model.pkl     # Trained ML model
+├── model.pkl                    # Trained ML model
 ├── vectorizer.pkl               # Tfidf vectorizer used during training
-├── app.py                       # Main Streamlit application
-├── preprocessing.py             # Text preprocessing functions
+├── model.py                     # Main Streamlit application
 ├── requirements.txt             # List of dependencies
+├── nltk_setup.py                # Used to download the nltk dependencies
 └── README.md                    # This file
 ```
 
@@ -56,15 +56,15 @@ streamlit run app.py
 
 1. Enter an SMS message into the input field.
 2. The message is preprocessed and vectorized using the same TF-IDF vectorizer used during training.
-3. The model (Multinomial Naive Bayes) predicts whether the message is spam or not.
+3. The model (ExtraTrees Classifier) predicts whether the message is spam or not.
 4. The result is displayed in real-time.
 
 ---
 
 ## 📈 Model Performance
 
-- Algorithm used: **Multinomial Naive Bayes**
-- Accuracy: ~98% on test data
+- Algorithm used: **ExtraTress Classifier**
+- Accuracy: ~97% on test data
 - Dataset: [SMS Spam Collection Dataset (UCI)](https://archive.ics.uci.edu/ml/datasets/sms+spam+collection)
 
 ---
